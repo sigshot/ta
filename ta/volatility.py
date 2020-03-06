@@ -185,8 +185,8 @@ class KeltnerChannel(IndicatorMixin):
         Returns:
             pandas.Series: New feature generated.
         """
-        tp = self._check_fillna(self._tp, value=-1)
-        return pd.Series(tp, name='kc_hband')
+        tp_high = self._check_fillna(self._tp_high, value=-1)
+        return pd.Series(tp_high, name='kc_hband')
 
     def keltner_channel_lband(self) -> pd.Series:
         """Keltner Channel Low Band
